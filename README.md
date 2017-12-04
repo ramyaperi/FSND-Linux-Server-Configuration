@@ -36,6 +36,9 @@ urllib3==1.22
 7. update the software 
   ` sudo apt-get update
     sudo apt-get upgrade`
+8. set timezone
+   `sudo timedatectl set-timezone UTC`
+    
 ###### Key-based SSH authentication
 
 1. On your local machine generate private key pair 
@@ -56,7 +59,29 @@ urllib3==1.22
   sudo ufw allow 2200/tcp
   sudo ufw allow 123/udp` 
   
-2. On the Amazon lightsail webpage go to networking and add port 2200
-  ![Alt text] (FSND-Linux-Server-Configuration/Screen Shot 2017-12-04 at 11.07.41 PM.png , "screenshot")
+2. On the Amazon lightsail webpage go to networking and add port 2200. 
 3. Enable the Firewall. From a different terminal make sure you can log in before you close this window as firewall is checked on new login's  
     `sudo ufw enable`
+    
+ ##### Deploy Flask application
+ 
+ 1. if you want to use python 2 
+ `sudo apt-get install libapache2-mod-wsgi`
+ for python 3 
+ `sudo apt-get install libapache2-mod-wsgi-py3`
+ 2. install apache 
+ `sudo apt-get install apache2`
+ 3. install pythonsetup tools
+ `sudo apt-get install python-setuptools`
+ 4. enable wsgi 
+ `sudo a2enmod wsgi `
+ 5. open  and create required structure
+  `cd /var/www `
+  `sudo mkdir FlaskApp`
+  `cd FlaskApp`
+ 6. install git 
+  `sudo apt-get install git`
+ 7. Clone from git , if its not a private repository login not required
+   `git clone directory_link`
+   
+  
