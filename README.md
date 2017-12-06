@@ -178,6 +178,10 @@ application.secret_key = 'super_secret_dummy_key'`
   `curl www.itemcatalog.com`
 * If curl shows errors then find the errors in error file specified in virtual host file
   `cat /var/www/FlaskApp/itemcatalog.com/logs/error.log`
- 
+* Since we have a database www-data should have write access to ItemCatalogAPI dir since it creates lock files while accessing database.
+* All the paths in the .py file might have to be chnage to absolute paths. 
+* Oauth and facebook auth has to be reconfigured to work on new settings.
+* If you want to access website from external IP name the conf files as follows 
+`0000-itemcatalog.com.conf` instead of `itemcatalog.com.conf` the default site is the one that is 1st alpabetical order.  so to go above 000-default add another 0 to start of your name.
   
   
