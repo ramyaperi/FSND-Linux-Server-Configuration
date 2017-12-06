@@ -53,10 +53,10 @@ urllib3==1.22
 ###### Firewall set up 
 
 1. Only allow connections for SSH (port 2200), HTTP (port 80), and NTP (port 123).  
-` sudo ufw default deny incoming    
-  sudo ufw default allow outgoing    
-  sudo ufw allow 80/tcp    
-  sudo ufw allow 2200/tcp   
+` sudo ufw default deny incoming         
+  sudo ufw default allow outgoing           
+  sudo ufw allow 80/tcp          
+  sudo ufw allow 2200/tcp             
   sudo ufw allow 123/udp`     
   
 2. On the Amazon lightsail webpage go to networking and add port 2200.     
@@ -129,7 +129,6 @@ urllib3==1.22
     #set this up so that you can check errors files       
     ErrorLog /var/www/FlaskApp/itemcatalog.com/logs/error.log       
     CustomLog /var/www/FlaskApp/itemcatalog.com/logs/access.log combined        
-
     WSGIDaemonProcess itemcatalogapp python-path=/var/www/FlaskApp/ItemCatalogAPI/venv/lib/python2.7/site-packages threads=5   
     WSGIProcessGroup itemcatalogapp     
     WSGIScriptAlias / /var/www/FlaskApp/ItemCatalogAPI/ItemCatalogAPI.wsgi      
