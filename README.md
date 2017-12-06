@@ -137,7 +137,6 @@ urllib3==1.22
         Order allow,deny      
         Allow from all      
     </Directory>      
-
 </VirtualHost>`     
 3. make error log dir structure       
 `cd /var/www/FlaskApp       
