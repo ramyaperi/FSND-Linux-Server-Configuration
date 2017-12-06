@@ -89,11 +89,11 @@ urllib3==1.22
    
   At this point the dir strcuture looks like 
    
-   |----FlaskApp
-   |---------ItemCatalogAPI
-   |--------------project.py(and other files)
-   |--------------static
-   |--------------templates
+   |----FlaskApp   
+   |---------ItemCatalogAPI   
+   |--------------project.py(and other files)    
+   |--------------static    
+   |--------------templates     
    
   ###### Setting up virtual environment 
   1. Install virtual environment
